@@ -6,5 +6,8 @@ services:
     environment:
       - PYTHONPATH=/var/task/src:/var/task/lib
       - PATH=/var/task/bin
+      - AWS_BUCKET_NAME='autocompara'
+      - AWS_ACCESS_KEY_ID= $${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY= $${AWS_SECRET_ACCESS_KEY}
     volumes:
       - ./src/:/var/task/src/

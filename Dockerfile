@@ -1,5 +1,5 @@
 FROM lambci/lambda:python3.6
-MAINTAINER tech@21buttons.com
+MAINTAINER jean.arreola@yahoo.com.mx
 
 USER root
 
@@ -13,3 +13,4 @@ COPY lib ./lib
 
 RUN mkdir -p $APP_DIR/lib
 RUN pip3 install -r requirements.txt -t /var/task/lib
+ 	

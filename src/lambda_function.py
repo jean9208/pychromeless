@@ -1,15 +1,17 @@
-import time
-
-from webdriver_wrapper import WebDriverWrapper
-from selenium.webdriver.common.keys import Keys
-
+from autocompara_lambda import cotizar
 
 def lambda_handler(*args, **kwargs):
-    driver = WebDriverWrapper()
 
-    driver.get_url('http://example.com')
-    example_text = driver.get_inner_html('(//div//h1)[1]')
+    #tipo    = args[0]
+    #year    = args[1]
+    #version = args[2]
+    #cp      = args[3]
 
-    driver.close()
-
-    return example_text
+    tipo = 'AUTO'
+    year = '2021'
+    version = 'YARIS S HB CVT 1.5L 4CIL'
+    cp = '55717'
+    
+    output = cotizar(tipo, year, version, cp)
+    
+    return(output)

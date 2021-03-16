@@ -12,3 +12,6 @@ env/
 
 ### Project specifics
 bin/
+
+### Actual scrapper
+src/autocompara_lambda.py
